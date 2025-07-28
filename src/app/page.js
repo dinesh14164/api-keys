@@ -50,6 +50,12 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <a
+          href="/dashboards"
+          className="mt-6 rounded-full bg-blue-600 text-white px-6 py-2 font-semibold text-base shadow hover:bg-blue-700 transition-colors"
+        >
+          Manage API Keys
+        </a>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
