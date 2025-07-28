@@ -12,8 +12,8 @@ export default function DeleteConfirmationModal({ isOpen, keyId, onClose, onDele
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl w-full max-w-md">
+    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 p-4">
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl w-full max-w-md mx-auto">
         <h2 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Delete API Key?</h2>
         <p className="mb-4 text-gray-600 dark:text-gray-400">Are you sure you want to delete this API key? This action cannot be undone.</p>
         <div className="flex gap-3 justify-end">

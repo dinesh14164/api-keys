@@ -27,8 +27,8 @@ export default function EditApiKeyModal({ isOpen, keyId, currentName, onClose, o
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl w-full max-w-md">
+    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 p-4">
+      <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl w-full max-w-md mx-auto">
         <h2 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Edit API Key Name</h2>
         <input
           className="w-full border border-gray-300 dark:border-gray-600 px-3 py-2 rounded-md mb-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"

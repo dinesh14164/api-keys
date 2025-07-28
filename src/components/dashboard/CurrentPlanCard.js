@@ -2,11 +2,11 @@ import React from "react";
 
 export default function CurrentPlanCard() {
   return (
-    <div className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 rounded-lg p-6 mb-8">
-      <div className="flex justify-between items-start">
-        <div>
+    <div className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 rounded-lg p-4 lg:p-6 mb-8">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start space-y-4 lg:space-y-0">
+        <div className="flex-1">
           <p className="text-white/80 text-sm font-medium">CURRENT PLAN</p>
-          <h2 className="text-white text-3xl font-bold mt-2">Researcher</h2>
+          <h2 className="text-white text-2xl lg:text-3xl font-bold mt-2">Researcher</h2>
           <div className="mt-6">
             <div className="flex items-center space-x-2 mb-2">
               <span className="text-white text-sm">API Usage</span>
@@ -24,9 +24,9 @@ export default function CurrentPlanCard() {
             </div>
           </div>
         </div>
-        <div className="text-right">
-          <div className="text-white/80 text-sm">0/1,000 Credits</div>
-          <button className="mt-4 bg-white/20 text-white px-4 py-2 rounded text-sm hover:bg-white/30 transition-colors">
+        <div className="lg:text-right">
+          <div className="text-white/80 text-sm mb-2 lg:mb-0">0/1,000 Credits</div>
+          <button className="mt-2 lg:mt-4 bg-white/20 text-white px-4 py-2 rounded text-sm hover:bg-white/30 transition-colors w-full lg:w-auto">
             📊 Manage Plan
           </button>
         </div>

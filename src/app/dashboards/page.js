@@ -13,7 +13,7 @@ import DeleteConfirmationModal from "../../components/dashboard/modals/DeleteCon
 import ToastNotification from "../../components/dashboard/ToastNotification";
 
 export default function Dashboard() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [editKeyName, setEditKeyName] = useState("");
 
   // Custom hooks
@@ -101,16 +101,16 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 lg:flex">
       {/* Sidebar */}
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      <div className={`flex flex-col min-h-screen w-full ${sidebarOpen ? 'lg:ml-0' : 'lg:ml-0'} transition-all duration-300 lg:flex-1`}>
         {/* Header */}
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-        <div className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8 w-full">
           {/* Current Plan Card */}
           <CurrentPlanCard />
 
