@@ -82,20 +82,17 @@ export async function summarizeGithubReadme(readmeContent) {
     ]
   ]);
 
-  // Set up the LLM (uses OpenAI, but you can swap for any compatible model)
+  // Set up the LLM with OpenAI
   const llm = new ChatOpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-    model: "gpt-3.5-turbo", // or "gpt-4o" if available
+    model: "gpt-3.5-turbo",
     temperature: 0,
   });
 
-  // Bind the schema to the model with strict output
-  const structuredLlm = llm.withStructuredOutput(summarySchema, {
-    name: "github_repo_summary",
-    strict: true,
-  });
+  // Bind the schema to the model using withStructuredOutput
+  const structuredLlm = llm.withStructuredOutput(summarySchema);
 
-  // Chain the prompt to the LLM
+  // Chain the prompt to the structured LLM
   const chain = prompt.pipe(structuredLlm);
 
   // Invoke the chain

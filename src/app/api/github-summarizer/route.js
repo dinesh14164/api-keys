@@ -23,7 +23,7 @@ export async function POST(request) {
     // Validate the API key against the database
     const isValid = await apiKeysService.validateApiKey(apiKey);
 
-    if (!isValid) {
+    if (!isValid?.valid) {
       return NextResponse.json({
         valid: false,
         message: 'Invalid API key'
